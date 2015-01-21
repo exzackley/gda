@@ -85,6 +85,10 @@ header {
     background: #18bc9c;
 }
 
+header p {
+    text-align: left;
+}
+
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
