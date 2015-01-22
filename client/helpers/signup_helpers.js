@@ -9,13 +9,21 @@ AutoForm.addHooks(['signUpForm'], {
         Session.set('signeeId', result);
         $('#signUpFormContainer').slideUp();
         $('#moreAboutMeFormContainer').slideDown();
+        scrollToSection('signup');
     }
 });
 
 AutoForm.addHooks(['moreAboutMeForm'], {
-    onSuccess: function(operation, result) {
+    onSuccess: function() {
         $('#moreAboutMeFormContainer').slideUp();
         $('#thankForSigningUp').slideDown();
+    }
+});
+
+UI.body.events({
+    'click #skipMoreAboutMe': function(e) {
+        e.preventDefault();
+        scrollToSection('nominate');
     }
 });
 
