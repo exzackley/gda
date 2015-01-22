@@ -10,6 +10,43 @@
                     <p>STEP 1: Sign up. 100% confidential. No one will know you signed up. You are not committing to anything by signing up, you are simply saying that you want to hear more about this effort.</p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    {{#autoForm collection="Signees" id="afInsertDemo" type="insert"}}
+                    {{#each afFieldNames}}
+                    {{> afQuickField name=this options="auto"}}
+                    {{/each}}
+                    <div>
+                        <button type="submit">Sign Up</button>
+                    </div>
+                    {{/autoForm}}
+                <!--<div class="form-group {{#if afFieldIsInvalid name='mobile'}}has-error{{/if}}">-->
+                    <!--<label class="control-label">{{afFieldLabelText name='mobile'}}</label>-->
+                    <!--{{> afFieldInput name='mobile'}}-->
+                    <!--{{#if afFieldIsInvalid name='mobile'}}-->
+                    <!--<span class="help-block">{{{afFieldMessage name='mobile'}}}</span>-->
+                    <!--{{/if}}-->
+                <!--</div>-->
+                <!--<div class="form-group {{#if afFieldIsInvalid name='city'}}has-error{{/if}}">-->
+                    <!--<label class="control-label">{{afFieldLabelText name='city'}}</label>-->
+                    <!--{{> afFieldInput name='city'}}-->
+                    <!--{{#if afFieldIsInvalid name='city'}}-->
+                    <!--<span class="help-block">{{{afFieldMessage name='city'}}}</span>-->
+                    <!--{{/if}}-->
+                <!--</div>-->
+                <!--<div class="form-group {{#if afFieldIsInvalid name='age'}}has-error{{/if}}">-->
+                    <!--<label class="control-label">{{afFieldLabelText name='age'}}</label>-->
+                    <!--{{> afFieldInput name='age'}}-->
+                    <!--{{#if afFieldIsInvalid name='age'}}-->
+                    <!--<span class="help-block">{{{afFieldMessage name='age'}}}</span>-->
+                    <!--{{/if}}-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<button type="submit" class="btn btn-primary">Add Person</button>-->
+                    <!--<button type="reset" class="btn btn-default">Reset Form</button>-->
+                <!--</div>-->
+                </div>
+            </div>
         </div>
     </section>
 </template>
