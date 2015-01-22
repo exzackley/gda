@@ -12,7 +12,16 @@
                     <p>Suggest other drivers for us to contact about this effort. We will send them a text message and/or email with a link to this site.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>(suggest form here)</p>
+                    {{#autoForm collection="Introductions" id="suggestForm" type="insert"}}
+                    {{> afQuickField name="type" type="hidden" value="suggest" label=" "}}
+                    {{> afQuickField name="name" options="auto"}}
+                    {{> afQuickField name="mobile" options="auto"}}
+                    {{> afQuickField name="email" options="auto"}}
+                    {{> afQuickField name="city" options="auto"}}
+                    <div>
+                        <button type="submit">Suggest</button>
+                    </div>
+                    {{/autoForm}}
                 </div>
             </div>
         </div>

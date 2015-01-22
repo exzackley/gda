@@ -64,3 +64,25 @@ Schemas.Signee = new SimpleSchema({
         }
     }
 });
+
+Schemas.Introduction = new SimpleSchema({
+    type: {
+        type: String,
+        allowedValues: ['nominate', 'suggest']
+    },
+    name: {
+        type: String
+    },
+    mobile: {
+        type: String,
+        optional: true
+    },
+    email: {
+        type: String,
+        optional: true
+    },
+    city: {
+        type: String,
+        optional: true
+    }
+});

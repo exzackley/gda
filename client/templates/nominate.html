@@ -12,7 +12,16 @@
                     <p>Nominate yourself and/or drivers who you trust and respect to organize the first local meeting of this organization in your city. (We guarantee 100% anonymity during this process.)</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>(nominate form here)</p>
+                    {{#autoForm collection="Introductions" id="nominateForm" type="insert"}}
+                    {{> afQuickField name="type" type="hidden" value="nominate" label=" "}}
+                    {{> afQuickField name="name" options="auto"}}
+                    {{> afQuickField name="mobile" options="auto"}}
+                    {{> afQuickField name="email" options="auto"}}
+                    {{> afQuickField name="city" options="auto"}}
+                    <div>
+                        <button type="submit">Nominate</button>
+                    </div>
+                    {{/autoForm}}
                 </div>
             </div>
         </div>

@@ -10,3 +10,13 @@ Signees.allow({
         return true;
     }
 });
+
+
+Introductions = Collections.Introductions = new Mongo.Collection("Introductions");
+Introductions.attachSchema(Schemas.Introduction);
+
+Introductions.allow({
+    insert: function () {
+        return true;
+    }
+});
