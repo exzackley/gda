@@ -1,8 +1,7 @@
-Meteor.startup(function () {
+Template.signup.rendered = function() {
     $('#moreAboutMeFormContainer').hide();
     $('#thankForSigningUp').hide();
-});
-
+};
 
 AutoForm.addHooks(['signUpForm'], {
     onSuccess: function(operation, result) {
