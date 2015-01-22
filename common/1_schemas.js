@@ -2,6 +2,11 @@ Schemas = {};
 
 Meteor.isClient && Template.registerHelper("Schemas", Schemas);
 
+var allLanguages = [
+    "Arabic", "English", "Chinese", "French", "German", "Hindi", "Japanese",
+    "Korean", "Portuguese", "Russian", "Spanish", "Urdu"
+];
+
 Schemas.Signee = new SimpleSchema({
     mobile: {
         type: String
@@ -29,12 +34,20 @@ Schemas.Signee = new SimpleSchema({
     languagePreference: {
         type: String,
         optional: true,
-        allowedValues: ["English", "Spanish", "Hindi", "Mandarin"],
+        allowedValues: allLanguages,
         autoform: {
             afFieldInput: {
                 firstOption: "(Select a Language)"
             }
         }
+    },
+    languagesSpoken: {
+        type: String,
+        optional: true
+    },
+    otherLanguages: {
+        type: String,
+        optional: true
     },
     postalCode: {
         type: String,

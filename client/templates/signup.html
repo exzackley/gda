@@ -9,38 +9,46 @@
             </div>
             <div class="row" id="signUpFormContainer">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>100% confidential. No one will know you signed up. You are not committing to anything by signing up, you are simply saying that you want to hear more about this effort.</p>
+                    <p>100% confidential. No one will know you signed up. You are not committing to anything by signing
+                        up, you are simply saying that you want to hear more about this effort.</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
                     {{#autoForm collection="Signees" id="signUpForm" type="insert"}}
-                        {{> afQuickField name="mobile" options="auto"}}
-                        {{> afQuickField name="carType" options="auto"}}
-                        {{> afQuickField name="city" options="auto"}}
-                        {{> afQuickField name="email" options="auto"}}
-                        {{> afQuickField name="name" options="auto"}}
-                        {{> afQuickField name="languagePreference" options="auto"}}
-                        <div>
-                            <button type="submit">Sign Up</button>
-                        </div>
+                    {{> afQuickField name="mobile" options="auto"}}
+                    {{> afQuickField name="carType" options="auto"}}
+                    {{> afQuickField name="city" options="auto"}}
+                    {{> afQuickField name="email" options="auto"}}
+                    {{> afQuickField name="name" options="auto"}}
+                    {{> afQuickField name="languagePreference" options="auto"}}
+                    <div>
+                        <button type="submit">Sign Up</button>
+                    </div>
                     {{/autoForm}}
                     <!--{{#each signees}}-->
-                        <!--<p>{{name}} ({{mobile}})</p>-->
+                    <!--<p>{{name}} ({{mobile}})</p>-->
                     <!--{{/each}}-->
                 </div>
             </div>
             <div class="row" id="moreAboutMeFormContainer">
                 <div class="col-lg-8 col-lg-offset-2">
                     <p>Thanks for signing up! We will appreciate if you can tell us more about yourself. (This is
-                       totally optional. Feel free to skip it.)</p>
+                        totally optional. Feel free to skip it.)</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
-                    {{#autoForm collection="Signees" id="moreAboutMeForm" type="update"}}
+                    {{#autoForm collection="Signees" doc=currentSignee id="moreAboutMeForm" type="update"}}
                     {{> afQuickField name="postalCode" options="auto"}}
                     {{> afQuickField name="startYear" options="auto"}}
+                    {{> afQuickField name="languagesSpoken" options="auto"}}
+                    {{> afQuickField name="otherLanguages" options="auto"}}
                     <div>
                         <button type="submit">Submit</button>
                     </div>
                     {{/autoForm}}
+                </div>
+            </div>
+            <div class="row" id="thankForSigningUp">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>Thanks for signing up! Please keep reading...</p>
                 </div>
             </div>
         </div>
