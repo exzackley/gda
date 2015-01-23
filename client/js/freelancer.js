@@ -8,9 +8,7 @@
 $(function() {
     $('body').on('click', '.page-scroll a', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
+        scrollToSection($anchor.attr('href').slice(1));
         event.preventDefault();
     });
 });
