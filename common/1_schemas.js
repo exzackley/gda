@@ -3,7 +3,7 @@ Schemas = {};
 Meteor.isClient && Template.registerHelper("Schemas", Schemas);
 
 var allLanguages = [
-    "Arabic", "English", "Chinese", "French", "German", "Hindi", "Japanese",
+    "Arabic", "Chinese", "English", "French", "German", "Hindi", "Japanese",
     "Korean", "Portuguese", "Russian", "Spanish", "Urdu"
 ];
 
@@ -42,8 +42,9 @@ Schemas.Signee = new SimpleSchema({
         }
     },
     languagesSpoken: {
-        type: String,
-        optional: true
+        type: [String],
+        optional: true,
+        allowedValues: allLanguages
     },
     otherLanguages: {
         type: String,

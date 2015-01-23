@@ -38,7 +38,7 @@
                     {{#autoForm collection="Signees" doc=currentSignee id="moreAboutMeForm" type="update"}}
                     {{> afQuickField name="postalCode" options="auto"}}
                     {{> afQuickField name="startYear" options="auto"}}
-                    {{> afQuickField name="languagesSpoken" options="auto"}}
+                    {{> afQuickField name="languagesSpoken" noselect=true}}
                     {{> afQuickField name="otherLanguages" options="auto"}}
                     <div>
                         <button type="submit" class="btn btn-primary">Submit</button>
