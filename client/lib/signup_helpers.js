@@ -24,9 +24,6 @@ Template.signup.helpers({
         return Signees.find();
     },
     currentSignee: function() {
-        var signeeId = Session.get('signeeId');
-        if(signeeId) {
-            return Signees.findOne(signeeId);
-        }
+        return Session.currentSignee();
     }
 });

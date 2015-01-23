@@ -3,3 +3,10 @@ window.scrollToSection = function(sectionName) {
         scrollTop: $("#" + sectionName).offset().top - 100
     });
 };
+
+Session.currentSignee = function() {
+    var signeeId = Session.get('signeeId');
+    if(signeeId) {
+        return Signees.findOne(signeeId);
+    }
+};
