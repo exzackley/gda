@@ -11,3 +11,9 @@ Template.nominate.events = {
         copyField(myself, 'email');
     }
 };
+
+AutoForm.addHooks(['nominateForm'], {
+    onSuccess: function () {
+        bootbox.alert("Thanks for nominating a leader!");
+    }
+});

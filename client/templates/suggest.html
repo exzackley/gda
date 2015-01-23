@@ -15,9 +15,9 @@
                     {{#autoForm collection="Introductions" id="suggestForm" type="insert"}}
                     {{> afQuickField name="type" type="hidden" value="suggest" label=" "}}
                     {{> afQuickField name="name" options="auto"}}
+                    {{> afQuickField name="city" options="auto"}}
                     {{> afQuickField name="mobile" options="auto"}}
                     {{> afQuickField name="email" options="auto"}}
-                    {{> afQuickField name="city" options="auto"}}
                     <div>
                         <button type="submit" class="btn btn-primary">Suggest</button>
                         <span class="btn btn-default" onclick="scrollToSection('spread')">Skip</span>

@@ -75,14 +75,12 @@ Schemas.Introduction = new SimpleSchema({
         type: String
     },
     mobile: {
-        type: String,
-        optional: true
-    },
-    email: {
-        type: String,
-        optional: true
+        type: String
     },
     city: {
+        type: String
+    },
+    email: {
         type: String,
         optional: true
     }
