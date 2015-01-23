@@ -21,7 +21,7 @@
                     {{> afQuickField name="name" options="auto"}}
                     {{> afQuickField name="languagePreference" options="auto"}}
                     <div>
-                        <button type="submit">Sign Up</button>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
                     </div>
                     {{/autoForm}}
                     <!--{{#each signees}}-->
@@ -41,8 +41,8 @@
                     {{> afQuickField name="languagesSpoken" options="auto"}}
                     {{> afQuickField name="otherLanguages" options="auto"}}
                     <div>
-                        <button type="submit">Submit</button>
-                        <button id="skipMoreAboutMe">Skip</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <span class="btn btn-default" onclick="scrollToSection('nominate')">Skip</span>
                     </div>
                     {{/autoForm}}
                 </div>

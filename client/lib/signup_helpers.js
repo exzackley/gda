@@ -19,13 +19,6 @@ AutoForm.addHooks(['moreAboutMeForm'], {
     }
 });
 
-UI.body.events({
-    'click #skipMoreAboutMe': function(e) {
-        e.preventDefault();
-        scrollToSection('nominate');
-    }
-});
-
 Template.signup.helpers({
     signees: function() {
         return Signees.find();

@@ -151,6 +151,10 @@ header .intro-text .skills {
     }
 }
 
+.navbar-brand {
+    font-size: 1em;
+}
+
 .navbar {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -186,10 +190,6 @@ section h2 {
 section.success {
     color: #fff;
     background: #18bc9c;
-}
-
-section.success button {
-    color: #2c3e50;
 }
 
 @media(max-width:767px) {

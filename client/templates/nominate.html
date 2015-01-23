@@ -19,7 +19,8 @@
                     {{> afQuickField name="email" options="auto"}}
                     {{> afQuickField name="city" options="auto"}}
                     <div>
-                        <button type="submit">Nominate</button>
+                        <button type="submit" class="btn btn-primary">Nominate</button>
+                        <span id="skipNominate" class="btn btn-default" onclick="scrollToSection('suggest')">Skip</span>
                     </div>
                     {{/autoForm}}
                 </div>
