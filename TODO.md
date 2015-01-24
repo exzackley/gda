@@ -1,7 +1,9 @@
 BACKLOG
 =======
 
-
+* Chinese translation
+* make it work on WeChat
+* navigation menu doesn't disappear automatically after selected (on mobile)
 
 DONE
 ====
