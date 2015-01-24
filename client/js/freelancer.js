@@ -8,6 +8,7 @@
 $(function() {
     $('body').on('click', '.page-scroll a', function(event) {
         var $anchor = $(this);
+        $(".navbar-toggle").click();
         scrollToSection($anchor.attr('href').slice(1));
         event.preventDefault();
     });
