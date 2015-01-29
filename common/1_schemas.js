@@ -9,7 +9,10 @@ var allLanguages = [
 
 Schemas.Signee = new SimpleSchema({
     mobile: {
-        type: String
+        type: String,
+        autoform: {
+            afFieldLabelText: 'Your mobile number'
+        }
     },
     carType: {
         type: String,

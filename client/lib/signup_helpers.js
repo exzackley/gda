@@ -25,5 +25,13 @@ Template.signup.helpers({
     },
     currentSignee: function() {
         return Session.currentSignee();
+    },
+    formLabels: function() {
+        var fields = ['mobile', 'car_type', 'city', 'email', 'name', 'language_preference'];
+        var result = {};
+        $(fields).each(function(index, field) {
+            result[field] = i18n('signup.form.' + field);
+        });
+        return result;
     }
 });

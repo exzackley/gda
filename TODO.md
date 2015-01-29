@@ -3,6 +3,7 @@ BACKLOG
 
 * Chinese translation
 * make it work on WeChat
+* auto-fill City field with GPS information
 * clean up footer content
 
 DONE
